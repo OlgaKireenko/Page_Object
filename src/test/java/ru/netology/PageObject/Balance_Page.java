@@ -9,7 +9,6 @@ import static com.codeborne.selenide.Selenide.elements;
 
 public class Balance_Page {
 
-    // к сожалению, разработчики не дали нам удобного селектора, поэтому так
     private ElementsCollection cards = $$(".list__item");
     private final String balanceStart = "баланс: ";
     private final String balanceFinish = " р.";

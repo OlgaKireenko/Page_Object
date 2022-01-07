@@ -8,6 +8,7 @@ import ru.netology.PageObject.Page_ObjectV1;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MoneyTransferTest {
 
@@ -20,7 +21,10 @@ public class MoneyTransferTest {
         var verificationPage = Page_ObjectV1.validLogin(authInfo);
         var verificationCode = Data_Helper.getVerificationCodeFor(authInfo);
         verificationPage.validVerify(verificationCode);
+        var Balance_Page = new Balance_Page();
+        int init_amount = Balance_Page.getCardBalance(0);
 
+        System.out.println(init_amount);
 
         $(".button__content").click();
         $("[data-test-id=amount] input").sendKeys("500");
@@ -29,10 +33,15 @@ public class MoneyTransferTest {
 
         $("[data-test-id=dashboard]").shouldBe(visible);
 
-        var Balance_Page = new Balance_Page();
+
         int amount1 = Balance_Page.getCardBalance(0);
 
        System.out.println(amount1);
+
+       int amount2 = init_amount +500;
+
+
+        assertEquals(amount1,amount2);
 
 
     }
