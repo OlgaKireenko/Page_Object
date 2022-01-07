@@ -36,13 +36,11 @@ public class MoneyTransferTest {
 
         int amount1 = Balance_Page.getCardBalance(0);
 
-       System.out.println(amount1);
+        System.out.println(amount1);
 
-       int amount2 = init_amount +500;
+        int amount2 = init_amount + 500;
 
-
-        assertEquals(amount1,amount2);
-
+        assertEquals(amount1, amount2);
 
     }
 

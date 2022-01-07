@@ -26,19 +26,4 @@ public class Data_Helper {
         return new VerificationCode("12345");
     }
 
-   // @Value
-   // public static class CreditCard {
-    //    private double number;
-     //   private int balance;
-
-     //   public static CreditCard getFirstCardInfo() {
-
-     //       return new CreditCard(555_900_000_000_001, 10000);        }
-
-        //public static CreditCard getSecondCardInfo() {
-    //return new CreditCard(555900000000002, 10000);        }
-
 }
-
-
-//public class Data_Helper {}
