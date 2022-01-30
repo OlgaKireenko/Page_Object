@@ -2,10 +2,10 @@ package ru.netology.test;
 
 import org.junit.jupiter.api.Test;
 
-import ru.netology.PageObject.DashboardPage;
-import ru.netology.PageObject.MoneyTransferPage;
+import ru.netology.page_object.DashboardPage;
+import ru.netology.page_object.MoneyTransferPage;
 import ru.netology.data.Data_Helper;
-import ru.netology.PageObject.LoginPage;
+import ru.netology.page_object.LoginPage;
 
 import static com.codeborne.selenide.Selenide.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;

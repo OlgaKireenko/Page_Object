@@ -1,4 +1,4 @@
-package ru.netology.PageObject;
+package ru.netology.page_object;
 
 import ru.netology.data.Data_Helper;
 
