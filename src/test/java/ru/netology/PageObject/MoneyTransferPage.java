@@ -19,7 +19,11 @@ public class MoneyTransferPage {
     public DashboardPage moneyTransfer() {
         $("[data-test-id=amount] input").sendKeys("500");
 
+
+        //Todo, вставить метод который возвращает номер карты из DataHelper
         $("[data-test-id=from] input").sendKeys("5559 0000 0000 0002");
+
+
         $(".button__text").click();
         return new DashboardPage();
 
