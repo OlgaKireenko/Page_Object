@@ -13,13 +13,10 @@ public class MoneyTransferPage {
         calculate.shouldBe(visible);
     }
 
-    public DashboardPage moneyTransfer() {
-        $("[data-test-id=amount] input").sendKeys("500");
+    public DashboardPage moneyTransfer(String amount, String cardNumber) {
+        $("[data-test-id=amount] input").sendKeys(amount);
 
-
-        //Todo, вставить метод который возвращает номер карты из DataHelper
-        $("[data-test-id=from] input").sendKeys("5559 0000 0000 0002");
-
+        $("[data-test-id=from] input").sendKeys(cardNumber);
 
         $(".button__text").click();
         return new DashboardPage();

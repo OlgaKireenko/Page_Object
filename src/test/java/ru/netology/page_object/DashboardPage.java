@@ -19,9 +19,8 @@ public class DashboardPage {
     }
 
     public int getCardBalance(int id) {
-        //if (id = **** **** **** 0001) {
 
-        val text = cards.get(0).text();
+        val text = cards.get(id).text();
 
         return extractBalance(text);
 
@@ -34,9 +33,8 @@ public class DashboardPage {
         return Integer.parseInt(value);
     }
 
-
-    public MoneyTransferPage addMoney() {
-        $(".button__content").click();
+    public MoneyTransferPage addMoney(int index) {
+        cards.get(index).find(".button__content").click();
         return new MoneyTransferPage();
     }
 }
